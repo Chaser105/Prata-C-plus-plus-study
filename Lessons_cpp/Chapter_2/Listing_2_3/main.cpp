@@ -31,7 +31,7 @@ int main()                                       // Определение гл�
 
 // Стандарт С++23/С++26:
 /*
-import std;                                                     // Заменяет #include <iostream>;
+import std;                                                     // Заменяет #include <iostream>. import std включает в себя математические функции и функции ввода-вывода;;
 
 int main()
 {
