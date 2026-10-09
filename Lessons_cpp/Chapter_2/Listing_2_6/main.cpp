@@ -47,6 +47,8 @@ static int stonetolb(int sts)               // Определение функц
 // Стандарт С++23/С++26:
 /*
 import std;                                                  // Заменяет #include <iostream>. import std включает в себя все функции ввода-вывода и современной печати;
+#include <iostream>
+#include <print>
 
 static int stonetolb(int);                                   // Прототип функции. Квалификатор static оставляет её видимой только в этом файле;
 
