@@ -44,3 +44,4 @@ static double Light_years_To_Astr_units(double light)        // Определе
 */
 
 
+
