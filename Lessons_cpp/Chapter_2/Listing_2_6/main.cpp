@@ -67,3 +67,4 @@ static int stonetolb(int sts)                               // Определе�
 }
 */
 
+
