@@ -72,3 +72,4 @@ static void simon(int n)                                     // Определе
 
 
 
+
