@@ -52,3 +52,4 @@ static void string_2()                                       // Определе
 */
 
 
+
