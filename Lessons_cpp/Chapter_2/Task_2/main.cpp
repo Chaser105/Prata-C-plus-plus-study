@@ -45,3 +45,4 @@ static double convert(double x)                              // Определе
 */
 
 
+
