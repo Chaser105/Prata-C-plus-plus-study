@@ -44,3 +44,4 @@ static double Celsius_To_Fahrenheit(double celsius)          // Определе
 */
 
 
+
