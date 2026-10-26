@@ -1,7 +1,7 @@
 // Стандарт С++11:
 /*
 #include <iostream>
-#include <string>                               // Подключение заголовочного файла для использования объекта string;
+#include <string>                               // Подключение заголовочного файла для использования класса string;
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
 
 #include <iostream>
 #include <format>
-#include <string>                              // Подключение заголовочного файла для использования объекта string;
+#include <string>                              // Подключение заголовочного файла для использования класса string;
 #include <string_view>                         // Подключение заголовочного файла для безопасного вывода срезов строк;
 
 constexpr uint8_t ar_size{20};
@@ -60,7 +60,7 @@ int main()
 /*
 #include <iostream>
 #include <print>
-#include <string>                           // Подключение заголовочного файла для использования объекта string;
+#include <string>                           // Подключение заголовочного файла для использования класса string;
 #include <string_view>                      // Подключение заголовочного файла для безопасного вывода срезов строк;
 
 int main()
