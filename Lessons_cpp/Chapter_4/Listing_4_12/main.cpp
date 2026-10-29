@@ -23,7 +23,7 @@ int main()
     cout << "Букет: " << bouquet.name << " за $"; // Объект cout через оператор точки получает доступ к полю name переменной bouquet и выводит его;
     cout << bouquet.price << endl;                // Объект cout через оператор точки получает доступ к полю price переменной bouquet и выводит его;
     choice = bouquet;                             // Переменной choice типа структуры inflatable присваивается переменная типа структуры inflatable. Происходит копирование полей одной структуры другой;
-    cout << "Букет: " << choice.name << " за $";  // Объект cout через оператор точки получает доступ к полю name переменной choice и выводит его;
+    cout << "Выбор: " << choice.name << " за $";  // Объект cout через оператор точки получает доступ к полю name переменной choice и выводит его;
     cout << choice.price << endl;                 // Объект cout через оператор точки получает доступ к полю price переменной choice и выводит его;
     return 0;
 }
@@ -59,7 +59,7 @@ int main()
     };
     std::cout << std::format("Букет: {} за ${}\n", std::string_view(bouquet.name), bouquet.price); // Функция std::format через оператор точки получает доступ к полям name и price переменной bouquet, подставляет их в шаблон, а объект cout выводит готовую строку;
     const inflatable choice = bouquet;     // Переменной choice типа структуры inflatable присваивается переменная bouquet типа структуры inflatable. Происходит копирование полей одной структуры присваиваиваются полям другой структуры. Квалификатор const защищает поля структуры от случайного изменения;
-    std::cout << std::format("Букет: {} за ${}\n", std::string_view(choice.name), choice.price);   // Функция std::format через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон, а объект cout выводит готовую строку;
+    std::cout << std::format("Выбор: {} за ${}\n", std::string_view(choice.name), choice.price);   // Функция std::format через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон, а объект cout выводит готовую строку;
 }
 
 
@@ -96,6 +96,6 @@ int main()
     };
     std::println("Букет: {} за ${}", bouquet.name, bouquet.price); // Функция println через оператор точки получает доступ к полям name и price переменной bouquet, подставляет их в шаблон и выводит готовую строку;
     const inflatable& choice = bouquet;     // Переменная choice получает ссылку на переменную bouquet типа структуры inflatable вместе с ее полями. Квалификатор const защищает поля структуры от случайного изменения;
-    std::println("Букет: {} за ${}", choice.name, choice.price);   // Функция println через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон и выводит готовую строку;
+    std::println("Выбор: {} за ${}", choice.name, choice.price);   // Функция println через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон и выводит готовую строку;
 }
 */
