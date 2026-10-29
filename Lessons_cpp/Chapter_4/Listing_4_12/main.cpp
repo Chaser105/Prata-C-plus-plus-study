@@ -1,5 +1,5 @@
 // Стандарт С++11:
-
+/*
 #include <iostream>
 
 struct inflatable                  // Объявление структуры (шаблона нового типа данных) inflatable;
@@ -13,17 +13,89 @@ int main()
 {
     using namespace std;
 
-    inflatable bouquet =
+    inflatable bouquet =           // Объявление переменной bouquet типа структуры inflatable;
     {
-        "sunflowers",
-        0.20,
-        12.49
+        "sunflowers",              // Сроковый литерал копируется в массив name[20];
+        0.20,                      // Значение записывается в поле float volume;
+        12.49                      // Значение записывается в поле double price;
     };
-    inflatable choice;
-    cout << "Букет: " << bouquet.name << " за $";
-    cout << bouquet.price << endl;
-    choice = bouquet;
-    cout << "Букет: " << choice.name << " за $";
-    cout << choice.price << endl;
+    inflatable choice;             // Объявление неинициализированной переменной choice типа структуры inflatable;
+    cout << "Букет: " << bouquet.name << " за $"; // Объект cout через оператор точки получает доступ к полю name переменной bouquet и выводит его;
+    cout << bouquet.price << endl;                // Объект cout через оператор точки получает доступ к полю price переменной bouquet и выводит его;
+    choice = bouquet;                             // Переменной choice типа структуры inflatable присваивается переменная типа структуры inflatable. Происходит копирование полей одной структуры другой;
+    cout << "Букет: " << choice.name << " за $";  // Объект cout через оператор точки получает доступ к полю name переменной choice и выводит его;
+    cout << choice.price << endl;                 // Объект cout через оператор точки получает доступ к полю price переменной choice и выводит его;
     return 0;
 }
+*/
+
+
+// Стандарт С++20:
+
+#include <iostream>
+#include <format>
+#include <cstdint>
+#include <string_view>
+
+constexpr uint8_t ar_size{20};
+
+namespace                                  // namespace - пространство имен, которое сообщает компилятору, что структура будет использоваться только в файле main.cpp, тем самым защищая программу от конфликтов имен, в случае расширения программы;
+{
+    struct inflatable                      // Объявление структуры (шаблона нового типа данных) inflatable;
+    {
+        char name[ar_size]{};              // Поле структуры: инициализированный массив из 20 символов char;
+        float volume{0.0f};                // Поле структуры: инициализированная переменная типа float, суффикс f делает значение типом float;
+        double price{0.0};                 // Поле структуры: инициализированная переменная типа double;
+    };
+}
+
+int main()
+{
+    const inflatable bouquet               // Инициализация полей переменной bouquet типа структуры inflatable. Квалификатор const защищает поля структуры от случайного изменения;
+    {
+        .name = "sunflowers",              // .name для читаемости кода;
+        .volume = 0.20f,                   // .volume для читаемости кода;
+        .price = 12.49                     // .price для читаемости кода;
+    };
+    std::cout << std::format("Букет: {} за ${}\n", std::string_view(bouquet.name), bouquet.price); // Функция std::format через оператор точки получает доступ к полям name и price переменной bouquet, подставляет их в шаблон, а объект cout выводит готовую строку;
+    const inflatable choice = bouquet;     // Переменной choice типа структуры inflatable присваивается переменная bouquet типа структуры inflatable. Происходит копирование полей одной структуры присваиваиваются полям другой структуры. Квалификатор const защищает поля структуры от случайного изменения;
+    std::cout << std::format("Букет: {} за ${}\n", std::string_view(choice.name), choice.price);   // Функция std::format через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон, а объект cout выводит готовую строку;
+}
+
+
+/*
+  std::string_view(bouquet.name) или std::string_view(choice.name) — безопасное чтение строки массива.
+При наложении "взгляда" на массив, std::string_view строго определяет границы текста, и функция std::format
+читает строку только от начала до конца, никогда не выходя за пределы выделенной памяти. Объект cout затем
+просто выводит этот безопасный результат на экран.
+*/
+
+
+// Стандарт С++23/С++26
+/*
+#include <print>
+#include <string>                          // Подключение заголовочного файла для применения класса string;
+
+namespace                                  // namespace - пространство имен, которое сообщает компилятору, что структура будет использоваться только в файле main.cpp, тем самым защищая программу от конфликтов имен, в случае расширения программы;
+{
+    struct inflatable                      // Объявление структуры (шаблона нового типа данных) inflatable;
+    {
+        std::string name{};                // Поле структуры: инициализированный объект строки;
+        float volume{0.0f};                // Поле структуры: инициализированная переменная типа float, суффикс f делает значение типом float;
+        double price{0.0};                 // Поле структуры: инициализированная переменная типа double;
+    };
+}
+
+int main()
+{
+    const inflatable bouquet               // Инициализация полей переменной bouquet типа структуры inflatable. Квалификатор const защищает поля структуры от случайного изменения;
+    {
+        .name = "sunflowers",           // .name для читаемости кода;
+        .volume = 0.20f,                   // .volume для читаемости кода;
+        .price = 12.49                     // .price для читаемости кода;
+    };
+    std::println("Букет: {} за ${}", bouquet.name, bouquet.price); // Функция println через оператор точки получает доступ к полям name и price переменной bouquet, подставляет их в шаблон и выводит готовую строку;
+    const inflatable& choice = bouquet;     // Переменная choice получает ссылку на переменную bouquet типа структуры inflatable вместе с ее полями. Квалификатор const защищает поля структуры от случайного изменения;
+    std::println("Букет: {} за ${}", choice.name, choice.price);   // Функция println через оператор точки получает доступ к полям name и price переменной choice, подставляет их в шаблон и выводит готовую строку;
+}
+*/
