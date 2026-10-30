@@ -36,7 +36,7 @@ namespace                                               // namespace - прос�
         // 3. Safe Union: std::variant. Может хранить ЛИБО строку с ошибкой, ЛИБО флаги аккаунта.
         // В отличие от union, variant помнит, что в нем лежит, и не позволит прочитать мусор.
         std::variant<std::string, AccountFlags> security_info{}; // Поле структуры security_info, которое может хранить в памяти объект строки std::string или флаг пользователя объекта AccountFlags;
-
+                                                                 // security_info - переменная типа данных контейнера-объекта std::variant;
         TransactionStatus status{TransactionStatus::Pending};    // Имя status переменной типа перечислений TransactionStatus, которая инициализируется по умолчанию константой Pending из этого перечисления;
     };
 }
@@ -44,33 +44,43 @@ namespace                                               // namespace - прос�
 int main()
 {
     // Задаем флаги: выставляем биты 0 и 2 в true (например, чтение и VIP-статус)
-    AccountFlags flags;
-    flags.set(0);
-    flags.set(2);
+    AccountFlags flags;                                 // Объявление объекта flags типа AccountFlags из 4 флагов;
+    flags.set(0);                                // Метод .set объекта flags устанавливает флаг 0 в true;
+    flags.set(2);                                // Метод .set объекта flags устанавливает флаг 2 в true;
 
     // Создаем транзакцию с помощью безопасного variant и enum class
-    const Payment tx
+    const Payment tx                                    // Объявление инициализация константного объекта tx типа структуры Payment. Квалификтаор const защищает данные полей от случайного изменения;
     {
-        .target_account = "NL99BANK0123456789",
-        .amount = 1500.50,
-        .security_info = flags, // variant автоматически переключился на тип AccountFlags
-        .status = TransactionStatus::Approved
+        .target_account = "NL99BANK0123456789",      // Поле target_account инициализируется строковым литералом, представляющее номер счета получателя;
+        .amount = 1500.50,                              // Поле amount инициализируется значением типа double, представляющее платеж с банковского счета;
+        .security_info = flags,                      // Поле security_info типа std::variant переключается на хранение объекта типа AccountFlags;
+        .status = TransactionStatus::Approved           // Поле status инициализируется константой Approved из перечисления TransactionStatus. Платеж на сумму 1500.50 переходит в статус "Одобрен";
     };
 
     // 4. Безопасный вывод enum class. Неявное приведение к числу запрещено, приводим явно.
-    std::println("Статус транзакции (числовой код): {}", static_cast<std::uint8_t>(tx.status));
+    std::println("Статус транзакции (числовой код): {}", static_cast<std::uint8_t>(tx.status)); // Функция std::println выводит отформатированную строку. static_cast<std::uint8_t>(tx.status) выполняет явное приведение значения поля status объекта tx к беззнаковому типу uint8_t (в данном случае к числу 1) для вывода на экран;
 
     // Проверяем, что лежит внутри variant, с помощью функции std::holds_alternative
-    if (std::holds_alternative<AccountFlags>(tx.security_info))
+    if (std::holds_alternative<AccountFlags>(tx.security_info)) // Функция std::holds_alternative проверяет, хранит ли сейчас контейнер tx.security_info тип данных AccountFlags. Если да, функция вернет true и выполнится блок оператора if;
     {
         // std::get безопасно извлекает данные. Если бы там была строка, программа бы не прочитала мусор, а выдала ошибку.
-        auto current_flags = std::get<AccountFlags>(tx.security_info);
-        std::println("Битовая маска безопасности платежа: {}", current_flags.to_string());
+        auto current_flags = std::get<AccountFlags>(tx.security_info);                                 // Инициализация перменной current_flags автоматического типа, в которую функция std::get безопасно извлекает данные из поля tx.security_info типа std::variant;
+        std::println("Битовая маска безопасности платежа: {}", current_flags.to_string());      // Функция std::println выводит отформатированную строку. Метод to_string() берет у переменной биты и преобразует в строку для вывода сообщения на консоль;
+    }                                                                                                  // Выведется 0101, по причине, что при изначальной установке флагов типа AccountFlags флаги под индексами 0 и 2 установили в единицы, флаги под индесами 1 и 3 не устанавливали, по умолчанию установлены в 0;
+
+    if (tx.status == TransactionStatus::Rejected)       // Если значение поля status объекта tx совпадает с константой Rejected перечислимого типа TransactionStatus, то выполняется блок оператора if;
+    {
+        std::println("Платеж был отклонен!");    // Функция std::println выводит сообщение на консоль;
     }
+
 
     // 5. БОНУС: std::bit_cast (C++20). Самый безопасный способ интерпретировать байты как другой тип.
     // Пересылаем сумму double в виде сырых байт uint64_t по сети без нарушения правил языка (Strict Aliasing).
-    double money = 99.99;
-    std::uint64_t raw_bytes = std::bit_cast<std::uint64_t>(money);
-    std::println("Байты числа double 99.99, представленные как целое число: {}", raw_bytes);
+    double money = 99.99;                                                                              // Инициализация переменной типа double;
+    auto raw_bytes = std::bit_cast<std::uint64_t>(money);                                              // Инициализация переменной raw_bytes автоматического типа. Функция std::bit_cast вслепую копирует сырые двоичные биты из переменной money, позволяя программе прочитать их как целое число uint64_t без математического изменения;
+    std::println("Байты числа double 99.99, представленные как целое число: {}", raw_bytes);// Функция std::println выводит отформатированную строку со значением переменной raw_bytes;
 }
+
+/*
+  В памяти число типа double записано в двойчном виде, но когда приводим к uint64_t, все биты у представляют большое десятичное число. И это число println отображает.
+*/
