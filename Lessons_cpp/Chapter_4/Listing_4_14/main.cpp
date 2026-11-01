@@ -58,8 +58,8 @@ int main()
     int32_t donuts = 6;
     double cups = 4.5;
     std::println("Количество пончиков = {}"                                      // Функция println выводит отформатированный строковый литерал со значением переменной и адресом значения переменной;
-    "и адрес значения пончиков = {}\n", donuts, static_cast<const void*>(&donuts)); // static_cast<const void*>(&donuts)) - безопасное приведение адреса &donuts к универсальному указателю типа void;
+    "и адрес значения пончиков = {}", donuts, static_cast<const void*>(&donuts)); // static_cast<const void*>(&donuts)) - безопасное приведение адреса &donuts к универсальному указателю типа void;
     std::println("Количесвто чашек = {}"                                         // Функция println выводит отформатированный строковый литерал со значением переменной и адресом значения переменной;
-    " и адрес значения чашек = {}\n", cups, static_cast<const void*>(&cups));       // static_cast<const void*>(&cups)) - безопасное приведение адреса &cups к универсальному указателю типа void;
+    " и адрес значения чашек = {}", cups, static_cast<const void*>(&cups));       // static_cast<const void*>(&cups)) - безопасное приведение адреса &cups к универсальному указателю типа void;
 }
 */
