@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.2)
-
+project(Prata_Study CXX)
 project(Prata_Study)
 
 set(CMAKE_CXX_STANDARD 26)
@@ -19,3 +19,11 @@ add_executable(Listing_4_11 Lessons_cpp/Chapter_4/Listing_4_11/main.cpp)
 add_executable(Listing_4_12  Lessons_cpp/Chapter_4/Listing_4_12/main.cpp)
 add_executable(Listing_4_13 Lessons_cpp/Chapter_4/Listing_4_13/main.cpp)
 add_executable(Listing_4_bonus Lessons_cpp/Chapter_4/Listing_4_bonus/main.cpp)
+add_executable(Listing_4_14 Lessons_cpp/Chapter_4/Listing_4_14/main.cpp)
+add_executable(Listing_4_15 Lessons_cpp/Chapter_4/Listing_4_15/main.cpp)
+add_executable(Listing_4_16 Lessons_cpp/Chapter_4/Listing_4_16/main.cpp)
+add_executable(Listing_4_17 Lessons_cpp/Chapter_4/Listing_4_17/main.cpp)
+add_executable(Listing_4_18 Lessons_cpp/Chapter_4/Listing_4_18/main.cpp)
+add_executable(Listing_4_19 Lessons_cpp/Chapter_4/Listing_4_19/main.cpp)
+add_executable(Listing_4_20 Lessons_cpp/Chapter_4/Listing_4_20/main.cpp)
+add_executable(Listing_4_21 Lessons_cpp/Chapter_4/Listing_4_21/main.cpp)
