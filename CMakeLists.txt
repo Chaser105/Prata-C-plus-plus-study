@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.2)
-project(Prata_Study CXX)
+
 project(Prata_Study)
 
 set(CMAKE_CXX_STANDARD 26)
