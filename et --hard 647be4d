@@ -1,0 +1,124 @@
+[33mc0055dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to origin/main
+[33mc0055dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33mc0055dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{2}: reset: moving to origin/main
+[33mc0055dd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: commit: настроил автоматический CMakeLists
+[33md801dfe[m HEAD@{4}: reset: moving to origin/main
+[33md801dfe[m HEAD@{5}: reset: moving to origin/main
+[33m647be4d[m HEAD@{6}: pull --rebase origin main (finish): returning to refs/heads/main
+[33m647be4d[m HEAD@{7}: pull --rebase origin main (pick): work in progress
+[33md801dfe[m HEAD@{8}: pull --rebase origin main (start): checkout d801dfe4d909c5e7d7fb510555f3c56f6f0e05f5
+[33m43ccee5[m HEAD@{9}: reset: moving to HEAD
+[33m43ccee5[m HEAD@{10}: commit: work in progress
+[33m8719308[m HEAD@{11}: commit: feat: add chapter 4 task 2 reading more than one word using getline()
+[33mb1d570f[m HEAD@{12}: commit: feat: add chapter 4 task 1 export of personal data
+[33m8779514[m HEAD@{13}: pull origin main: Fast-forward
+[33m551de28[m HEAD@{14}: reset: moving to HEAD
+[33m551de28[m HEAD@{15}: commit: feat: add listing 4.24 certain type combinations, vector and array classes
+[33mb4bbcaa[m HEAD@{16}: commit: feat: add listing 4.23 some combinations of types
+[33m1a0080d[m HEAD@{17}: commit: feat: add listing 4.22 using the delete operation and the vector class
+[33m1f88535[m HEAD@{18}: commit: feat: add listing 4.21 using new with a structure and pointers to it
+[33m0369476[m HEAD@{19}: commit: feat: add listing 4.21 using new with a structure and pointers to it
+[33ma167c1a[m HEAD@{20}: commit: feat: add listing 4.21 using with a structure and pointers to it
+[33m0eb2b7e[m HEAD@{21}: pull origin main: Fast-forward
+[33m0947ddc[m HEAD@{22}: commit: feat: add listing 4.21 using new with a struct
+[33m7437102[m HEAD@{23}: commit: feat: add listing 4.20 using pointers to strings and the string class
+[33m9df254b[m HEAD@{24}: pull origin main: Fast-forward
+[33m2e5f5fb[m HEAD@{25}: commit: feat: add listing 4.19 pointer addition and modernizing pointer arithmetic via spans
+[33mffb2623[m HEAD@{26}: commit: feat: add listing 4.18 using the new operator for arrays and the vector class
+[33m6aecc63[m HEAD@{27}: commit: feat: add listing 4.17 using the new operator and smart pointers
+[33m086f035[m HEAD@{28}: pull origin main: Fast-forward
+[33m832aa48[m HEAD@{29}: commit: feat: add listing 4.16 pointer initialization
+[33m7d39774[m HEAD@{30}: commit: feat: add listing 4.15 our first pointer variable
+[33m658b3be[m HEAD@{31}: commit: feat: add listing 4.14 using the & operator to find an address
+[33mf9fc2fb[m HEAD@{32}: commit: feat: add listing 4.14 using the & operator to find an address
+[33ma6a00ef[m HEAD@{33}: commit (amend): feat: add listing 4.bonus demonstrate enum class, variant, and bitset
+[33mad30458[m HEAD@{34}: pull origin main: Fast-forward
+[33m1c64766[m HEAD@{35}: reset: moving to HEAD
+[33m1c64766[m HEAD@{36}: commit: feat: add listing 4.12 structure assignment
+[33me6e4e23[m HEAD@{37}: commit: feat: add listing 4.12 structure assignment
+[33m9849ea7[m HEAD@{38}: commit: feat: add listing 4.11 simple structure
+[33m6b12367[m HEAD@{39}: commit: feat: add listing 4.11 simple structure
+[33mf285f5a[m HEAD@{40}: pull origin main: Fast-forward
+[33m65f0653[m HEAD@{41}: commit: feat: add listing 4.10 inputting a string containing spaces
+[33m4814ec2[m HEAD@{42}: commit: feat: add listing 4.9 additional string-class features
+[33m778d272[m HEAD@{43}: reset: moving to HEAD
+[33m778d272[m HEAD@{44}: reset: moving to HEAD~2
+[33m3ff7ca8[m HEAD@{45}: commit: feat: add listing 4.10 inputting a string containing spaces
+[33med05b04[m HEAD@{46}: commit: feat: add listing 4.9
+[33m778d272[m HEAD@{47}: reset: moving to HEAD
+[33m778d272[m HEAD@{48}: reset: moving to HEAD~1
+[33me64061d[m HEAD@{49}: commit (amend): feat: add listing 4.10 inputting a string containing spaces
+[33m9f13cba[m HEAD@{50}: commit (amend): feat: add listing 4.10 inputting a string containing spaces
+[33m2509be9[m HEAD@{51}: reset: moving to origin/main
+[33m6ee7726[m HEAD@{52}: commit: feat: add listing 4.9 additional string-class features
+[33mb41050f[m HEAD@{53}: commit: feat: add listing 4.8 strings input features
+[33m980b30f[m HEAD@{54}: reset: moving to HEAD
+[33m980b30f[m HEAD@{55}: reset: moving to HEAD~1
+[33m146e325[m HEAD@{56}: commit (amend): feat: add listing 4.9 additional string-class features
+[33mb12edd9[m HEAD@{57}: commit: feat: add listing 4.9 additional string-class features
+[33m980b30f[m HEAD@{58}: commit: feat: add listing 4.8 assignment, addition, appending strings
+[33me57ed83[m HEAD@{59}: commit: feat: add listing 4.7 using the C++ string class
+[33ma5a2fd3[m HEAD@{60}: commit: feat: add listing 4.7 using the C++ string class
+[33md6a8bf2[m HEAD@{61}: commit: feat: add listing 4.7 using the C++ string class
+[33mdc75a74[m HEAD@{62}: commit: feat: add listing 4.6 string input after numeric input
+[33mea63ed3[m HEAD@{63}: commit: feat: add listing 4.5 reading more than one word using get()
+[33m31533c9[m HEAD@{64}: commit: feat: add listing 4.4 reading more than one word using getline()
+[33me383fe7[m HEAD@{65}: reset: moving to HEAD~1
+[33md8f460f[m HEAD@{66}: commit: feat: add listing 4.4 reading more than one word using getline()
+[33me383fe7[m HEAD@{67}: reset: moving to HEAD~2
+[33m6237923[m HEAD@{68}: commit (amend): feat: add listing 4.5 reading more than one word using get()
+[33m68af44b[m HEAD@{69}: reset: moving to HEAD~1
+[33m3d25e4c[m HEAD@{70}: commit: feat: add listing 4.4 reading more than one word using getline()
+[33m68af44b[m HEAD@{71}: commit: feat: add listing 4.4 reading more than one word using getline()
+[33m623f713[m HEAD@{72}: reset: moving to HEAD
+[33m623f713[m HEAD@{73}: commit: feat: add listing 4.5 reading more than one word using get()
+[33me383fe7[m HEAD@{74}: commit: feat: add listing 4.4 reading more than one word using getline
+[33mdb2bc89[m HEAD@{75}: commit (amend): feat: add listing 4.3 reading more than one string
+[33m8fd7753[m HEAD@{76}: commit: feat: add listing 4.3 reading more than one string
+[33m24ee645[m HEAD@{77}: commit: feat: add listing 4.2 storing strings in an array
+[33mb61100b[m HEAD@{78}: commit (amend): feat: add listing 4.1 small arrays of integers
+[33mc4b2019[m HEAD@{79}: pull origin main: Fast-forward
+[33m8869f4a[m HEAD@{80}: commit: feat: add listing 4.1 small arrays of integers
+[33mff6ed39[m HEAD@{81}: reset: moving to origin/main
+[33m7fb0292[m HEAD@{82}: commit: feat: add chapter 3 task 3 calculation of latitude
+[33m28ad0e6[m HEAD@{83}: commit: feat: add chapter 3 task 2 body mass index calculation
+[33m6c57657[m HEAD@{84}: commit: feat: add chapter 3 task 1 converting inches to feet
+[33m4e02745[m HEAD@{85}: reset: moving to origin/main
+[33m4ccf156[m HEAD@{86}: commit: feat: add chapter 2 task 7 display time format using functions
+[33md103b8d[m HEAD@{87}: commit: feat: add chapter 2 task 6 convert light years to astronomical units
+[33m6b8e0a3[m HEAD@{88}: commit: feat: add chapter 2 task 5 convert celsius to fahrenheit
+[33ma1b298d[m HEAD@{89}: commit: feat: add chapter 2 task 3 user functions for printing text
+[33m3d6ee43[m HEAD@{90}: commit: feat: add chapter 2 task 4 convert age in years to months
+[33m37c420f[m HEAD@{91}: commit: feat: add chapter 2 task 2 convert furlongs to yards
+[33m65db715[m HEAD@{92}: commit: feat: add chapter 2 task 1 display name and address
+[33m6890a85[m HEAD@{93}: commit: feat: add listing 2.6 custom function returning a value
+[33m9faf86d[m HEAD@{94}: commit: feat: add listing 2.5 currency converter and math operations
+[33m9203c71[m HEAD@{95}: commit: feat: add listing 2.4 define custom functions and call examples
+[33med60422[m HEAD@{96}: commit: feat: add listing 2.3 input data via cin and use functions
+[33m6d3fc44[m HEAD@{97}: commit: feat: add listing 2.2 syntax of basic variables and printing values
+[33m6ef3264[m HEAD@{98}: commit: feat: add listing 2.1 display a message on the screen
+[33m216ccd2[m HEAD@{99}: commit: chore: update build configuration and gitignore rules
+[33m7e24146[m HEAD@{100}: commit: feat: add listing 3.12 modulo division (%)
+[33m28a1264[m HEAD@{101}: commit: feat: add listing 3.11 division of integers and floating-point numbers
+[33ma543c46[m HEAD@{102}: commit: feat: add listing 3.10 float type division and precision
+[33m98b81f2[m HEAD@{103}: commit: feat: add listing 3.9 floating-point arithmetic operations
+[33m764aadf[m HEAD@{104}: commit: feat: add listing 3.8 float precision loss and round-off error
+[33mff0f786[m HEAD@{105}: commit: feat: add listing 3.7 member functions and escape sequences
+[33m3c1653f[m HEAD@{106}: commit: feat: add listing 3.6 character type and ascii codes
+[33m97781d8[m HEAD@{107}: commit: feat: add listing 3.5 integer division and modulo with format
+[33m1436b47[m HEAD@{108}: commit: feat: add listing 3.4 express values in hex and octal
+[33md2558f6[m HEAD@{109}: commit: feat: add listing 3.3 hex, octal and decimal constants
+[33m12b4187[m HEAD@{110}: commit: feat: add listing 3.2 unsigned integer overflow
+[33m501af17[m HEAD@{111}: commit: feat: add listing 3.1 integer types and limits
+[33mbf1e724[m HEAD@{112}: commit: feat: complete all listings for chapter 2
+[33m80bc8b1[m HEAD@{113}: reset: moving to HEAD
+[33m80bc8b1[m HEAD@{114}: reset: moving to 80bc8b1
+[33m221f7a4[m HEAD@{115}: commit: feat: add listing 3.11 division of integers and floating-point numbers
+[33m34c9e0f[m HEAD@{116}: commit: feat: add chapter 3 basic listings and formatting fixes
+[33m2bdc53d[m HEAD@{117}: reset: moving to HEAD
+[33m2bdc53d[m HEAD@{118}: reset: moving to HEAD~1
+[33mcb3d4e6[m HEAD@{119}: commit: feat: complete chapter 3 up to listing 3.12 with clean formatting
+[33m2bdc53d[m HEAD@{120}: Branch: renamed refs/heads/main to refs/heads/main
+[33m2bdc53d[m HEAD@{122}: commit: feat: add listing 3.12 modulo division (%)
+[33me266eb4[m HEAD@{123}: commit: feat: add chapter 3 listings and formatting fixes
+[33m80bc8b1[m HEAD@{124}: commit (initial): feat: add listing 3.12 modulo division (%)
