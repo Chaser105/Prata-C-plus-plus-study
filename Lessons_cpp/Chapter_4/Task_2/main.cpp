@@ -1,4 +1,4 @@
-// Стандарт С++23/С++26
+// Стандарт С++20
 
 #include <format>
 #include <iostream>
