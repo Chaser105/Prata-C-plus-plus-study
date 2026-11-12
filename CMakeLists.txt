@@ -19,8 +19,8 @@ foreach(source_file ${ALL_CPP_FILES})
     # Склеиваем имя главы и задачи в уникальный идентификатор (например: Chapter_4_Task_1)
     set(exe_name "${chapter_name}_${task_name}")
 
-    # Находим все .cpp файлы конкретно в этой папке задачи
-    file(GLOB SUB_SOURCES "${dir_path}/*.cpp")
+    # Находим все .cpp, .h и .hpp файлы конкретно в этой папке задачи
+    file(GLOB SUB_SOURCES "${dir_path}/*.cpp" "${dir_path}/*.h" "${dir_path}/*.hpp")
 
     # Если такая цель еще не создана, собираем её
     if(NOT TARGET ${exe_name})
